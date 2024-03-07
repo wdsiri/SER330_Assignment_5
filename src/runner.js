@@ -48,3 +48,5 @@ testInstitution.listStudents()
 testInstitution.add_course_offering(softwareQualityAssuranceFallCourseOffering)
 testInstitution.register_student_for_course(seniorStudent, 'Software Quality Assurance', 'Software Engineering', 'SER330', '01', '2024', '1' )
 testInstitution.list_course_schedule('2024', '1')
+
+console.log(seniorStudent.toString())
