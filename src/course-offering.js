@@ -3,7 +3,7 @@ const Student = require('./student.js')
 class CourseOffering {
   constructor (course, sectionNumber, year, quarter) {
     this.course = course
-    this.section_number = sectionNumber
+    this.sectionNumber = sectionNumber
     this.instructor = null
     this.year = year
     this.quarter = quarter
@@ -25,7 +25,7 @@ class CourseOffering {
   submit_grade (student, grade) {
     const validGrades = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F']
     if (student instanceof Student && validGrades.includes(grade)) {
-      this.grades[student.username] = grade
+      this.grades[student.userName] = grade
       const key = this.toString()
       student.transcript[key] = grade
     } else {
@@ -35,7 +35,7 @@ class CourseOffering {
 
   get_grade (student) {
     if (student instanceof Student) {
-      return this.grades[student.username]
+      return this.grades[student.userName]
     } else {
       return this.grades[student]
     }
@@ -43,9 +43,9 @@ class CourseOffering {
 
   toString () {
     if (this.instructor) {
-      return `${this.course.name}, ${this.course.department} ${this.course.number}-${this.section_number}, ${this.instructor.first_name} ${this.instructor.last_name} (${this.quarter} ${this.year})`
+      return `${this.course.name}, ${this.course.department} ${this.course.number}-${this.sectionNumber}, ${this.instructor.firstName} ${this.instructor.lastName} (${this.quarter} ${this.year})`
     } else {
-      return `${this.course.name}, ${this.course.department} ${this.course.number}-${this.section_number} (${this.quarter} ${this.year})`
+      return `${this.course.name}, ${this.course.department} ${this.course.number}-${this.sectionNumber} (${this.quarter} ${this.year})`
     }
   }
 }

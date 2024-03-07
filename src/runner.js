@@ -16,11 +16,12 @@ console.log(testPerson.toString())
 
 // Create and validate a Student
 // A Student is a Person
-const seniorStudent = new Student('student_lastName', 'student_firstName', testInstitution, '1/1/2024', 'student_username')
+// creator of NodeJS
+const seniorStudent = new Student('Ryan', 'Dahl', testInstitution, '1/1/2024', 'student_username')
 console.log(seniorStudent.toString())
 
 // Create a Class in the course catalog
-const softwareQualityAssuranceCourse = new Course('Software Engineering', 'SER330', 'Software Quality Assurance')
+const softwareQualityAssuranceCourse = new Course('Software Engineering', 'SER330', 'Software Quality Assurance', 3)
 
 // Create a course offering
 // A Course offering is a class that will be offered with a specific section for a specific year
@@ -29,3 +30,21 @@ console.log(softwareQualityAssuranceFallCourseOffering.toString())
 
 const sqaInstructor = new Instructor('Nicolini', 'Dylan', testInstitution, '1/1/2024', 'dnicolini')
 console.log(sqaInstructor.toString())
+
+// Confirm the institution methods
+// hire an instructor
+testInstitution.hire_instructor(sqaInstructor)
+testInstitution.list_instructors()
+
+// add courses
+testInstitution.add_course(softwareQualityAssuranceCourse)
+testInstitution.list_course_catalog()
+
+// enroll students
+testInstitution.enroll_student(seniorStudent)
+testInstitution.listStudents()
+
+// add course offering e.g. a course for a specific semester
+testInstitution.add_course_offering(softwareQualityAssuranceFallCourseOffering)
+testInstitution.register_student_for_course(seniorStudent, 'Software Quality Assurance', 'Software Engineering', 'SER330', '01', '2024', '1' )
+testInstitution.list_course_schedule('2024', '1')
