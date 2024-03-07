@@ -60,7 +60,7 @@ class Student extends Person {
     return ('\n' + 'Student Name: ' + this.firstName + ' ' + this.lastName + '\n' +
             'School: ' + this.school.name + '\n' +
             'DOB: ' + this.dateOfBirth.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) + '\n' +
-            'Username: ' + this.username + '\n' +
+            'Username: ' + this.userName + '\n' +
             'Email: ' + this.email + '\n' +
             'GPA: ' + this.gpa + '\n' +
             'Credits: ' + this.credits + '\n')

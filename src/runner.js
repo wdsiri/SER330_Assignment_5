@@ -17,7 +17,7 @@ console.log(testPerson.toString())
 // Create and validate a Student
 // A Student is a Person
 // creator of NodeJS
-const seniorStudent = new Student('Ryan', 'Dahl', testInstitution, '1/1/2024', 'student_username')
+const seniorStudent = new Student('Ryan', 'Dahl', testInstitution, '1/1/2024', 'rdahl')
 console.log(seniorStudent.toString())
 
 // Create a Class in the course catalog

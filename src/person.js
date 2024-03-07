@@ -9,7 +9,7 @@ class Person {
   }
 
   get email () {
-    return `${this.username}@${this.school.domain}`
+    return `${this.userName}@${this.school.domain}`
   }
 
   toString () {
